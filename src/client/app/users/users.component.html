@@ -1,0 +1,18 @@
+<p>
+  users works!
+</p>
+
+<small>REST API Users from server:</small>
+
+<table>
+  <tr>
+    <th>Users</th>
+    <th>age</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.name}}</td>
+    <td>{{user.age}}</td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>

@@ -9,16 +9,16 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AppComponent implements OnInit {
 
-  pongMessage$: Observable<any>;
+  // pongMessage$: Observable<any>;
 
   constructor(private pingService: PingService) {}
 
-  ping() {
-    this.pingService.sendPing(new Date());
-  }
+  // ping() {
+  //   this.pingService.sendPing(new Date());
+  // }
 
   ngOnInit() {
 
-    this.pongMessage$ = this.pingService.getPong();
+    // this.pongMessage$ = this.pingService.getPong();
   }
 }

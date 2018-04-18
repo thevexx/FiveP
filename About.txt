@@ -1,0 +1,21 @@
+Included
+    REST API
+    WebSockets
+Install
+    npm install
+Development
+    Development port is on: 4200 ( inherited from angular-cli )
+    in development, every controller ( route ) from NestJS must be mapped in proxy.conf.json
+        npm start
+
+Production
+    Production port is specified in .env ( default to 5400 )
+        npm run build:universal
+    # test production
+        npm run serve:universal
+Angular CLI generator
+    To generate component|service|pipe|module with Angular CLI use:
+    Add new component in Contact Module
+        ng generate component contact/InfoComponent --module=contact/contact.module.ts
+Static asset directory
+    src/client/assets
