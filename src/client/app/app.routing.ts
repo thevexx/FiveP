@@ -1,6 +1,7 @@
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { UsersComponent } from './users/users.component';
+import { FilesComponent } from './files/files.component';
 
 export const routes = [
   {
@@ -19,5 +20,9 @@ export const routes = [
   {
     path: 'users',
     component: UsersComponent
+  },
+  {
+    path: 'files',
+    component: FilesComponent
   }
 ];

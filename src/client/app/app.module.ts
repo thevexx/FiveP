@@ -12,6 +12,7 @@ import { ContactComponent } from './contact/contact.component';
 import { UsersComponent } from './users/users.component';
 
 import { PingService } from './shared/services/ping.services';
+import { FilesComponent } from './files/files.component';
 
 const config: SocketIoConfig = { url: 'http://localhost:5400', options: {} };
 
@@ -20,7 +21,8 @@ const config: SocketIoConfig = { url: 'http://localhost:5400', options: {} };
     AppComponent,
     AboutComponent,
     ContactComponent,
-    UsersComponent
+    UsersComponent,
+    FilesComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'nestJS' }),
