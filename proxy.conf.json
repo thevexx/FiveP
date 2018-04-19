@@ -6,5 +6,9 @@
   "/user": {
     "target": "http://localhost:5400",
     "secure": false
+  },
+  "/upload": {
+    "target": "http://localhost:5400",
+    "secure": false
   }
 }

@@ -14,20 +14,22 @@ export class UploadServiceComponent {
 
     private readonly file: File[] = [];
 
-    public storageFile = multer.diskStorage({
-        destination(req, file, cb) {
-            cb(null, 'src/upload');
-        },
-        filename(req, file, cb) {
-            cb(null, `${file.fieldname}-${Date.now()}`);
-        }
-    });
-
-    public diskUpload = multer({ storage: this.storageFile });
-
-    async create(createFiileDto: CreateFileDto): Promise<File> {
-        const createdFile = new this.fileModel(createFiileDto);
+    async create(createFileDto: CreateFileDto): Promise<File> {
+        const createdFile = new this.fileModel(createFileDto);
         return await createdFile.save();
+    }
+    async upload() {
+        const storageFile = multer.diskStorage({
+            destination(req, file, cb) {
+                cb(null, 'src/upload');
+            },
+            filename(req, file, cb) {
+                cb(null, `${file.fieldname}-${Date.now()}`);
+            }
+        });
+        console.log(storageFile);
+        const diskUpload = multer({ storage: storageFile });
+        diskUpload.any();
     }
 
 }

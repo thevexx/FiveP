@@ -6,11 +6,15 @@ import { File } from './interfaces/upload.interface';
 @Controller('upload')
 export class UploadController {
 
-    constructor(private readonly uploadServiceComponent: UploadServiceComponent) { }
+  constructor(private readonly uploadServiceComponent: UploadServiceComponent) { }
 
-    @Post('file')
+  @Post()
   async create(@Body() createUserDto: CreateFileDto) {
     this.uploadServiceComponent.create(createUserDto);
+  }
+
+  async upload(@Body() params) {
+    this.uploadServiceComponent.upload();
   }
 
 }

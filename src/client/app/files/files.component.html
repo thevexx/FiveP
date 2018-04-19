@@ -1,3 +1,8 @@
-<p>
-  file works!
-</p>
+<form>
+  <div>
+    <input type="file" (change)="fileSelect($event)">
+  </div>
+  <div>
+    <input type="button" value="Upload" class="b-upload" (click)="upload()">
+  </div>
+</form>
